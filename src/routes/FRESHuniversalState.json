@@ -437,7 +437,7 @@
                   },
                   {
                     "id": "4xksWca9rf",
-                    "position": 21.833,
+                    "position": 22.433,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -462,10 +462,56 @@
                     "value": 9.1
                   }
                 ]
+              },
+              "v64_U2ZT7D": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Snow:[\"positiony\"]",
+                "keyframes": [
+                  {
+                    "id": "8inlBceA6y",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -30
+                  },
+                  {
+                    "id": "uqRXzzXzf-",
+                    "position": 22.433,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -30
+                  },
+                  {
+                    "id": "UUVV0rAoVE",
+                    "position": 22.667,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
               }
             },
             "trackIdByPropPath": {
-              "[\"scale\"]": "H6IHK2skWz"
+              "[\"scale\"]": "H6IHK2skWz",
+              "[\"positiony\"]": "v64_U2ZT7D"
             }
           },
           "Snøhaug": {
@@ -1061,6 +1107,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "P1ehxNFJMlJX67wk",
     "MK7sKZDtnfLheEMl",
     "CYJ_l8H-op_4Hul6",
     "kYYeSImCqrtDpZAk",
