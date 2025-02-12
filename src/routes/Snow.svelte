@@ -11,7 +11,7 @@
   const { load } = useLoader(TextureLoader);
   let snowflakeTexture;
 
-  const snowCount = 3000;
+  const snowCount = 1;
   let snowParticles = [];
 
   type $$Props = Props<THREE.Group>
@@ -25,17 +25,13 @@
   /* Snøfnugg */
   const createSnowParticles = () => {
     return Array.from({ length: snowCount }, () => ({
-      position: [
-        Math.random() * 0.6 - 0.3, // X: tilfeldig mellom -10 og 10
-        Math.random() * 1.8 - 0.1, // Y: tilfeldig mellom -10 og 10
-        Math.random() * 0.6 - 0.3  // Z: tilfeldig mellom -10 og 10
-      ],
-      scale: Math.random() * 0.003 // Tilfeldig mellom 0.005 og 0.04
+      position: [0, 0, 0],
+      scale: 1 // Tilfeldig mellom 0.005 og 0.04
     }));
   };
 
   onMount(async () => {
-    snowflakeTexture = await load('/snowflake.png');
+    snowflakeTexture = await load('/ForslagLogo1_1-1LARGE.png');
     snowParticles = createSnowParticles();
   });
 </script>

@@ -9,6 +9,7 @@
 	import Spark from './Spark.svelte';
   import { onDestroy, onMount } from 'svelte';
 	import DirectionalLight1 from './DirectionalLight1.svelte';
+	import Snow from './Snow.svelte';
 
   // export let text: string
   export let bevelEnabled: boolean
@@ -44,9 +45,11 @@
   // Reactive store for media query
   const isSmallScreen = writable(false)
   const mediaQuery = window.matchMedia('(max-width: 768px)')
+  
   const updateScreenSize = () => {
     isSmallScreen.set(mediaQuery.matches)
   }
+  
   mediaQuery.addEventListener('change', updateScreenSize)
   updateScreenSize() // Initialize
 
@@ -54,12 +57,33 @@
     ? { fov: 140, position: [0, 0, 20] } // Small screen
     : { fov: 90, position: [0, 0, 20] } // Large screen
 
-  let currentTime = new Date()
-  const updateTime = () => {
-    currentTime = new Date()
+
+  // Måldato: 7. april 2025 kl. 00:00:00
+  const targetDate = new Date("2025-04-07T00:00:00").getTime();
+
+  let countdown = getRemainingTime();
+
+  function getRemainingTime() {
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+
+    if (timeLeft <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    return {
+      days: Math.floor(timeLeft / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
+    };
   }
-  const interval = setInterval(updateTime, 1000)
-  onDestroy(() => clearInterval(interval))
+
+  const interval = setInterval(() => {
+    countdown = getRemainingTime();
+  }, 1000);
+
+  onDestroy(() => clearInterval(interval));
 </script>
 
 <Float
@@ -71,7 +95,7 @@
     fov={cameraProps.fov}
     position={cameraProps.position}
   >
-    <OrbitControls
+    <!-- <OrbitControls
       enableZoom={false}
       enableDamping={true}
       enablePan={false}
@@ -80,7 +104,7 @@
       target={[0, 0, 0]}
       maxPolarAngle={2}
       minPolarAngle={1}
-    />
+    /> -->
   </T.PerspectiveCamera>
 </Float>
 
@@ -100,11 +124,11 @@
 
 
 
-<T.AmbientLight
-  intensity={1}
-  position={[5, 5, 15]}
+<!-- <T.AmbientLight
+  intensity={100}
+  position={[15, 15, 15]}
   castShadow
-/>
+/> -->
 
 <ContactShadows
   scale={10}
@@ -113,9 +137,9 @@
   opacity={0.5}
 />
 
-<T.Mesh scale.z={depth / 20} position={[-19.6, 5, 0]}>
+<T.Mesh scale.z={depth / 20} position={[-18.8, 5, 0]}>
   <Text3DGeometry
-    text="{currentTime.toLocaleTimeString()}"
+    text="{`${countdown.days}d ${countdown.hours}t`}"
     {bevelEnabled}
     {bevelOffset}
     {bevelSegments}
@@ -127,16 +151,16 @@
     {smooth}
   />
   <T.MeshStandardMaterial
-    color="#FD3FFF"
+    color="#fff000"
     toneMapped={false}
     metalness={1.0}
     roughness={0.1}
   />
 </T.Mesh>
 
-<T.Mesh scale.z={depth / 20} position={[-19.6, -5, 0]}>
+<T.Mesh scale.z={depth / 20} position={[-18.8, -5, 0]}>
   <Text3DGeometry
-    text="{currentTime.toLocaleDateString()}"
+    text="{`${countdown.minutes}m ${countdown.seconds}s`}"
     {bevelEnabled}
     {bevelOffset}
     {bevelSegments}
@@ -148,7 +172,49 @@
     {smooth}
   />
   <T.MeshStandardMaterial
-    color="#FD3FFF"
+    color="#fff000"
+    toneMapped={false}
+    metalness={1.0}
+    roughness={0.1}
+  />
+</T.Mesh>
+
+<T.Mesh scale.z={depth / 20} position={[-18.8, 5, -0.01]}>
+  <Text3DGeometry
+    text="{`${countdown.days}d ${countdown.hours}t`}"
+    {bevelEnabled}
+    {bevelOffset}
+    {bevelSegments}
+    bevelSize={0.09}
+    {bevelThickness}
+    {curveSegments}
+    {depth}
+    {size}
+    {smooth}
+  />
+  <T.MeshStandardMaterial
+    color="#e02e00"
+    toneMapped={false}
+    metalness={1.0}
+    roughness={0.1}
+  />
+</T.Mesh>
+
+<T.Mesh scale.z={depth / 20} position={[-18.8, -5, -0.01]}>
+  <Text3DGeometry
+    text="{`${countdown.minutes}m ${countdown.seconds}s`}"
+    {bevelEnabled}
+    {bevelOffset}
+    {bevelSegments}
+    bevelSize={0.09}
+    {bevelThickness}
+    {curveSegments}
+    {depth}
+    {size}
+    {smooth}
+  />
+  <T.MeshStandardMaterial
+    color="#e02e00"
     toneMapped={false}
     metalness={1.0}
     roughness={0.1}
@@ -161,3 +227,5 @@
 /> -->
 
 <DirectionalLight1/>
+
+<Snow/>

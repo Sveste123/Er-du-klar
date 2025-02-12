@@ -12,11 +12,11 @@
   let text = ''
   let bevelEnabled = true
   let bevelOffset = 0
-  let bevelSegments = 5
-  let bevelSize = 0.07
-  let bevelThickness = 1.4
+  let bevelSegments = 1
+  let bevelSize = 0
+  let bevelThickness = 0.22
   let curveSegments = 12
-  let depth = 0.4
+  let depth = 0.65
   let size = 7.28
   let smooth = 1
 
@@ -27,14 +27,14 @@
 
 </script>
 
-<Pane
+<!-- <Pane
   title="Text3DGeometry"
   position="fixed"
 >
-  <!-- <Textarea
+  <Textarea
     bind:value={text}
     label="text"
-  /> -->
+  />
   <Checkbox
     label="bevelEnabled"
     bind:value={bevelEnabled}
@@ -89,7 +89,7 @@
     min={0}
     max={180 * DEG2RAD}
   />
-</Pane>
+</Pane> -->
 
 <!-- <Pane title="Directional Light Target">
   <Slider bind:value={$targetX} label="Target X" min={-10} max={10} />

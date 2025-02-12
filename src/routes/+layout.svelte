@@ -17,6 +17,6 @@
 <div class="page-container">
     <slot />
 </div>
-<div class="watermark">
+<!-- <div class="watermark">
     Alle rettigheter tilhører © Snilerevyen | Org.nr. 916 144 989
-</div>
+</div> -->
