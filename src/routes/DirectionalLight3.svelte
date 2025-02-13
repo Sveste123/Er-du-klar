@@ -19,7 +19,7 @@
   const component = forwardEventHandlers()
 </script>
 
-<Theatre config={{ state: state }} studio={{ hide: true }}>
+<Theatre config={{ state: state }} studio={{ hide: true, enabled:false }}>
   <Sequence autoplay>
     <!-- 💡 Directional Light -->
     <SheetObject key="DirectionalLight3" props={{ intensity: 0, posX: 0, posY: 0, posZ: 22 }} let:values>
