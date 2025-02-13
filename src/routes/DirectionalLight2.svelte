@@ -22,14 +22,12 @@
 <Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
     <!-- 💡 Directional Light -->
-    <SheetObject key="DirectionalLight" props={{ intensity: 0, posX: 0, posY: 0, posZ: 22 }} let:values>
+    <SheetObject key="DirectionalLight2" props={{ intensity: 0, posX: 0, posY: 0, posZ: 22 }} let:values>
       <T.DirectionalLight 
         bind:light={light}
         intensity={values.intensity} 
         position={[values.posX, values.posY, values.posZ]}
-        oncreate={(ref) => {
-          ref.lookAt(0, 100, 0)
-        }}
+        color={0xFF0000}
         castShadow
       />
     </SheetObject>

@@ -10,6 +10,9 @@
   import { onDestroy, onMount } from 'svelte';
 	import DirectionalLight1 from './DirectionalLight1.svelte';
 	import Snow from './Snow.svelte';
+	import DirectionalLight3 from './DirectionalLight3.svelte';
+	import DirectionalLight2 from './DirectionalLight2.svelte';
+	import DirectionalLight4 from './DirectionalLight4.svelte';
 
   // export let text: string
   export let bevelEnabled: boolean
@@ -227,5 +230,8 @@
 /> -->
 
 <DirectionalLight1/>
+<DirectionalLight2/>
+<DirectionalLight3/>
+<DirectionalLight4/>
 
 <Snow/>

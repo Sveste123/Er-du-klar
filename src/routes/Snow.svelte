@@ -38,11 +38,8 @@
 
 <Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
-    <SheetObject key="Snow" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
+    <SheetObject key="Logo" props={{ scale: 0, opacity: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
-        rotation.x={values.rotationx} 
-        rotation.y={values.rotationy} 
-        rotation.z={values.rotationz} 
         position.x={values.positionx} 
         position.y={values.positiony} 
         position.z={values.positionz} 
