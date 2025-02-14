@@ -26,12 +26,12 @@
   const createSnowParticles = () => {
     return Array.from({ length: snowCount }, () => ({
       position: [0, 0, 0],
-      scale: 1 // Tilfeldig mellom 0.005 og 0.04
+      scale: 0.8 // Tilfeldig mellom 0.005 og 0.04
     }));
   };
 
   onMount(async () => {
-    snowflakeTexture = await load('/ForslagLogo1_1-1LARGE.png');
+    snowflakeTexture = await load('/festivalente_dritt_plakat.png');
     snowParticles = createSnowParticles();
   });
 </script>

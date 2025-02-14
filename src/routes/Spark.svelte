@@ -29,7 +29,7 @@
   const component = forwardEventHandlers()
 </script>
 
-<Theatre config={{ state: state }} studio={{ hide: true }}>
+<Theatre config={{ state: state }} studio={{ hide: false }}>
   <Sequence autoplay>
     <SheetObject key="Spark" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
