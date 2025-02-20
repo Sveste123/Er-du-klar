@@ -6,26 +6,13 @@
   import { writable } from 'svelte/store';
   // import * as Utils from 'three/src/math/MathUtils'
   import { Environment, interactivity, Text, useCursor, Text3DGeometry } from '@threlte/extras'
-	import Spark from './Spark.svelte';
   import { onDestroy, onMount } from 'svelte';
 	import DirectionalLight1 from './DirectionalLight1.svelte';
 	import Snow from './Snow.svelte';
 	import DirectionalLight3 from './DirectionalLight3.svelte';
 	import DirectionalLight2 from './DirectionalLight2.svelte';
 	import DirectionalLight4 from './DirectionalLight4.svelte';
-
-  // export let text: string
-  export let bevelEnabled: boolean
-  export let bevelOffset: number
-  export let bevelSegments: number
-  export let bevelSize: number
-  export let bevelThickness: number
-  export let curveSegments: number
-  export let depth: number
-  export let size: number
-  export let smooth: number
-
-
+  import Countdown3D from './Countdown3D.svelte';
 
   // // Lysets target-posisjon (default peker mot origo)
   // export let targetX = writable(0);
@@ -140,7 +127,7 @@
   opacity={0.5}
 />
 
-<T.Mesh scale.z={depth / 20} position={[-18.8, 5, 0]}>
+<!-- <T.Mesh scale.z={depth / 20} position={[-18.8, 5, 0]}>
   <Text3DGeometry
     text="{`${countdown.days}d ${countdown.hours}t`}"
     {bevelEnabled}
@@ -222,7 +209,7 @@
     metalness={1.0}
     roughness={0.1}
   />
-</T.Mesh>
+</T.Mesh> -->
 
 <!-- <Spark
   scale={0.01}
@@ -233,5 +220,6 @@
 <DirectionalLight2/>
 <DirectionalLight3/>
 <DirectionalLight4/>
+<Countdown3D/>
 
 <Snow/>

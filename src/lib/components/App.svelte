@@ -28,7 +28,7 @@
 </script>
 
 <!-- <Pane
-  title="Text3DGeometry"
+  title="3DText"
   position="fixed"
 >
   <Textarea
