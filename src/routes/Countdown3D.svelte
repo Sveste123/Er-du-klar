@@ -53,7 +53,7 @@
   const component = forwardEventHandlers()
 </script>
 
-<Theatre config={{ state: state }} studio={{ hide: true, enabled: true }}>
+<Theatre config={{ state: state }} studio={{ hide: true, enabled: false }}>
   <Sequence autoplay>
     <!-- 💡 Directional Light -->
     <SheetObject key="3DText" props={{ scaleprop: 1, intensity: 0, posX: 0, posY: 0, posZ: 0 }} let:values>
