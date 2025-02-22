@@ -8,7 +8,6 @@
   import { Environment, interactivity, Text, useCursor, Text3DGeometry } from '@threlte/extras'
   import { onDestroy, onMount } from 'svelte';
 	import DirectionalLight1 from './DirectionalLight1.svelte';
-	import Snow from './Snow.svelte';
 	import DirectionalLight3 from './DirectionalLight3.svelte';
 	import DirectionalLight2 from './DirectionalLight2.svelte';
 	import DirectionalLight4 from './DirectionalLight4.svelte';
@@ -220,6 +219,5 @@
 <DirectionalLight2/>
 <DirectionalLight3/>
 <DirectionalLight4/>
-<Countdown3D/>
 
-<Snow/>
+<Countdown3D/>

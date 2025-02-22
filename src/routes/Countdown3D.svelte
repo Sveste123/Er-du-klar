@@ -55,19 +55,10 @@
 
 <Theatre config={{ state: state }} studio={{ hide: true, enabled: false }}>
   <Sequence autoplay>
-    <!-- 💡 Directional Light -->
-    <SheetObject key="3DText" props={{ scaleprop: 1, intensity: 0, posX: 0, posY: 0, posZ: 0 }} let:values>
-      <!-- <T.DirectionalLight 
-        intensity={values.intensity} 
-        position={[values.posX, values.posY, values.posZ]}
-        oncreate={(ref) => {
-          ref.lookAt(0, 100, 0)
-        }}
-        castShadow
-      /> -->
+    <SheetObject key="Countdown3D" props={{ scaleprop: 1, visible: 1, text: `${countdown.days}d ${countdown.hours}t`, posX: 0, posY: 0, posZ: 0 }} let:values>
       <T.Mesh scale={[values.scaleprop, values.scaleprop, depth / 20]} position={[-18.8, 5, 0]}>
         <Text3DGeometry
-          text="{`${countdown.days}d ${countdown.hours}t`}"
+          text={values.text}
           {bevelEnabled}
           {bevelOffset}
           {bevelSegments}
@@ -83,6 +74,7 @@
           toneMapped={false}
           metalness={1.0}
           roughness={0.1}
+          visible={values.visible}
         />
       </T.Mesh>
 
@@ -104,6 +96,7 @@
           toneMapped={false}
           metalness={1.0}
           roughness={0.1}
+          visible={values.visible}
         />
       </T.Mesh>
 
@@ -125,6 +118,7 @@
           toneMapped={false}
           metalness={1.0}
           roughness={0.1}
+          visible={values.visible}
         />
       </T.Mesh>
 
@@ -146,6 +140,7 @@
           toneMapped={false}
           metalness={1.0}
           roughness={0.1}
+          visible={values.visible}
         />
       </T.Mesh>
 

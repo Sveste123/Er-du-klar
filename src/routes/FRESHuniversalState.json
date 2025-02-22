@@ -76,6 +76,13 @@
           },
           "3DText": {
             "posZ": 22
+          },
+          "Countdown3D": {
+            "scaleprop": 1,
+            "intensity": 100,
+            "color": "#000000",
+            "colorY": "#fff000",
+            "visible": 1
           }
         }
       },
@@ -1988,6 +1995,110 @@
               "[\"posY\"]": "ApxZwgJJjm",
               "[\"posX\"]": "zVeyRstfHJ"
             }
+          },
+          "Countdown3D": {
+            "trackData": {
+              "KS4Dk3lwu6": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Countdown3D:[\"color\"]",
+                "keyframes": [
+                  {
+                    "id": "sgU0EiVOGq",
+                    "position": 2.833,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": "#000000"
+                  },
+                  {
+                    "id": "_EoOuBVlh3",
+                    "position": 2.867,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": "#fff000"
+                  }
+                ]
+              },
+              "CD2gOxSZWh": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Countdown3D:[\"color1\"]",
+                "keyframes": [
+                  {
+                    "id": "54FEPNdDDl",
+                    "position": 1.8,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": "#fff000"
+                  }
+                ]
+              },
+              "VMSaGoGvl2": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Countdown3D:[\"colorY\"]",
+                "keyframes": [
+                  {
+                    "id": "HFI78aQ-oW",
+                    "position": 1.833,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": "#000000"
+                  },
+                  {
+                    "id": "iNx6Yb3chL",
+                    "position": 1.867,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": "#fff000"
+                  }
+                ]
+              },
+              "LkJZJYG0uv": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Countdown3D:[\"text\"]",
+                "keyframes": []
+              },
+              "QFLnQYZr8f": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Countdown3D:[\"visible\"]",
+                "keyframes": []
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"color\"]": "KS4Dk3lwu6",
+              "[\"color1\"]": "CD2gOxSZWh",
+              "[\"colorY\"]": "VMSaGoGvl2",
+              "[\"text\"]": "LkJZJYG0uv",
+              "[\"visible\"]": "QFLnQYZr8f"
+            }
           }
         }
       }
@@ -1995,6 +2106,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "Y6wgpOW1RGY00Rsz",
     "VLpuh_8pckEn3L_6",
     "QhCjWdCBORr9F0p2",
     "nRqytqNg9RhOQQg3",
@@ -2043,7 +2155,6 @@
     "WPbZkg8gn6vUeQXo",
     "zer-LL6IC-gcIg4A",
     "3INYdbKnXQIdi3WQ",
-    "3NxZMF1Ht-ERfSNa",
-    "MwyNAgkgqa__8-Rn"
+    "3NxZMF1Ht-ERfSNa"
   ]
 }
