@@ -11,7 +11,7 @@
 	import DirectionalLight3 from './DirectionalLight3.svelte';
 	import DirectionalLight2 from './DirectionalLight2.svelte';
 	import DirectionalLight4 from './DirectionalLight4.svelte';
-  import Countdown3D from './Countdown3D.svelte';
+  import Text3D from './Text3D.svelte';
 
   // // Lysets target-posisjon (default peker mot origo)
   // export let targetX = writable(0);
@@ -76,7 +76,7 @@
 </script>
 
 <Float
-  rotationIntensity={0.5}
+  rotationIntensity={0}
   rotationSpeed={2}
 >
   <T.PerspectiveCamera
@@ -220,4 +220,4 @@
 <DirectionalLight3/>
 <DirectionalLight4/>
 
-<Countdown3D/>
+<Text3D/>
