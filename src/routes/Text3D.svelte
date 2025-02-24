@@ -45,13 +45,21 @@
   let bevelOffset = 0
   let bevelSegments = 1
   let bevelSize = 0
-  let bevelThickness = 0.22
-  let curveSegments = 12
-  let depth = 0.65
-  let size = 7.28
+  let bevelThickness = 0.2
+  let curveSegments = 3
+  let depth = 0.6
+  let size = 7.3
   let smooth = 1
 
   const component = forwardEventHandlers()
+
+  // export let onRedirect = () => {};
+
+  function onRedirect() {
+    console.log("Redirect triggered")
+    window.location.href = "//www.festivalente.no";
+  }
+
 </script>
 
 <Theatre config={{ state: state }} studio={{ hide: true, enabled: false }}>
@@ -373,5 +381,13 @@
         />
       </T.Mesh>
     </SheetObject>
+
+    <SheetObject key="RedirectTrigger" props={{ redirect: false }} let:values>
+      {#if values.redirect}
+        <!-- Når redirect blir true, kall onRedirect -->
+        <svelte:component this={onRedirect()} />
+      {/if}
+    </SheetObject>
+
   </Sequence>
 </Theatre>

@@ -3,18 +3,21 @@
   import { List, type ListOptions } from 'svelte-tweakpane-ui';
   import { onDestroy, onMount } from 'svelte';
 
-  onMount(() => {
-    setTimeout(() => {
-      window.location.href = "//www.festivalente.no";
-    }, 12500); // 15000ms = 15 sekunder
-  });
-
   let showIndicator = true; // Bruker en tilstand for å styre synlighet
-
   function showIndicatorFalse(e: Event){
         showIndicator = false;
     }
 
+  // onMount(() => {
+  //   setTimeout(() => {
+  //     window.location.href = "//www.festivalente.no";
+  //   }, 12500); // 15000ms = 15 sekunder
+  // });
+
+  // function handleRedirect() {
+  //   console.log("Redirect triggered")
+  //   window.location.href = "//www.festivalente.no";
+  // }
 </script>
 
 <div class="app" on:pointerdown={showIndicatorFalse}>

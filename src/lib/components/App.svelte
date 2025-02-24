@@ -5,6 +5,9 @@
   import { Checkbox, Pane, Slider, Textarea } from 'svelte-tweakpane-ui'
   import { DEG2RAD } from 'three/src/math/MathUtils.js'
   import Scene from '../../routes/Scene.svelte'
+
+  // import Text3D from "../../routes/Text3D.svelte";
+  // export let onRedirect;
   
   // import Renderer  from './Renderer.svelte'
 
@@ -26,6 +29,8 @@
   let targetZ = writable(0);
 
 </script>
+
+<!-- <Text3D {onRedirect} /> -->
 
 <!-- <Pane
   title="3DText"
