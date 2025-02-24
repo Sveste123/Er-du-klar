@@ -1,6 +1,7 @@
 <script lang="ts">
     import App from "../lib/components/App.svelte"
     import { List, type ListOptions } from 'svelte-tweakpane-ui';
+    import { injectAnalytics } from '@vercel/analytics/sveltekit'
 </script>
 
 
