@@ -6,7 +6,7 @@
   onMount(() => {
     setTimeout(() => {
       window.location.href = "//www.festivalente.no";
-    }, 14000); // 15000ms = 15 sekunder
+    }, 12500); // 15000ms = 15 sekunder
   });
 
   let showIndicator = true; // Bruker en tilstand for å styre synlighet
