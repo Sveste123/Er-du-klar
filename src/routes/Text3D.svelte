@@ -57,7 +57,7 @@
 
   function onRedirect() {
     console.log("Redirect triggered")
-    window.location.href = "//www.festivalente-2025.vercel.app";
+    window.location.href = "https://festivalente-2025.vercel.app";
   }
 
 </script>
